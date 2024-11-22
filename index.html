@@ -12,7 +12,22 @@
     <form id="create-task-form" action="" method="POST">
       <label for="new-task-description">Task description:</label>
       <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <br/><br/>
+      <label for="assigned-to-description">Assigned to:</label>
+      <input type="text" id="assigned-to-description" name="assigned-to-description" placeholder="description">
+      <br/><br/>
       <input type="submit" value="Create New Task">
+      <select id="importance" name="i-am-confused">
+        <optgroup label="red">
+          <option value="red">urgent</option>
+        </optgroup>
+        <optgroup label="yellow">
+          <option value="yellow">important</option>
+        </optgroup>
+        <optgroup label="green">
+          <option value="green">un-important</option>
+        </optgroup>
+      </select>
     </form>
 
     <div id="list">
