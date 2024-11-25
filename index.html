@@ -17,22 +17,29 @@
       <input type="text" id="assigned-to-description" name="assigned-to-description" placeholder="description">
       <br/><br/>
       <input type="submit" value="Create New Task">
-      <select id="importance" name="i-am-confused">
-        <optgroup label="red">
-          <option value="red">urgent</option>
+      <select id="importance" name="i-am-confused" placeholder="importance">
+        <option value="" disabled selected>Select Importance</option>
+        <optgroup label="Critical">
+          <option value="black">Black</option>
         </optgroup>
-        <optgroup label="yellow">
-          <option value="yellow">important</option>
+        <optgroup label="High">
+          <option value="red">Red</option>
+          <option value="orange">Orange</option>
         </optgroup>
-        <optgroup label="green">
-          <option value="green">un-important</option>
+        <optgroup label="Medium">
+          <option value="yellow">Yellow</option>
+          <option value="green">Green</option>
+        </optgroup>
+        <optgroup label="Low">
+          <option value="blue">Blue</option>
+          <option value="purple">Purple</option>
         </optgroup>
       </select>
     </form>
 
     <div id="list">
       <h2>My Todos:</h2>
-      <ul id="tasks">
+      <ul id="tasks" list-style-type="circle">
       </ul>
     </div>
 
