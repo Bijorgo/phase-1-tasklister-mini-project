@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault(); // Prevent submit default settings
     
     const newTask = document.createElement("li");
+    // Can play with, <ul>, <ol> in the HTML
     const taskDescription = document.querySelector("#new-task-description").value;
     const assignedTo = document.querySelector("#assigned-to-description").value;
     const importanceColor = document.querySelector("#importance").value;
@@ -15,13 +16,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Sort tasks based on priority
     switch (importanceColor) {
-      case 'red': newTask.style.color = "red"; break;
-      case 'orange': newTask.style.color = "orange"; break;
-      case 'yellow': newTask.style.color = "gold"; break;
-      case 'green': newTask.style.color = "green"; break;
-      case 'blue': newTask.style.color = "blue"; break;
-      case 'purple': newTask.style.color = "purple"; break;
-      default: newTask.style.color = "black"; break;
+      case 'red': 
+        newTask.style.color = "red"; 
+        break;
+      case 'orange': 
+        newTask.style.color = "orange"; 
+        break;
+      case 'yellow': 
+        newTask.style.color = "gold"; 
+        break;
+      case 'green': 
+        newTask.style.color = "green"; 
+        break;
+      case 'blue': 
+        newTask.style.color = "blue"; 
+        break;
+      case 'purple': 
+        newTask.style.color = "purple"; 
+        break;
+      default: 
+        newTask.style.color = "black"; 
+        break;
     }
 
     // Add task to the list
@@ -48,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const newText = form.querySelector("#new-task-description").value || currentText;
       const newAssignment = form.querySelector("#assigned-to-description").value || currentAssignment;
+      const newImportanceColor = form.querySelector("#importance").value;
       // I originally wrote this with if statements and used Ada to consolidate this. 
       // Should also be able to be written with string methods
       // || is logical OR. Empty string = falsey
@@ -56,13 +72,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Update task text and reapply color
       newTask.textContent = `To-do: ${newText} Assigned To: ${newAssignment}`;
-      switch (importanceColor) {
-        case 'red': newTask.style.color = "red"; break;
-        case 'orange': newTask.style.color = "orange"; break;
-        case 'yellow': newTask.style.color = "gold"; break;
-        case 'green': newTask.style.color = "green"; break;
-        case 'blue': newTask.style.color = "blue"; break;
-        case 'purple': newTask.style.color = "purple"; break;
+
+      switch (newImportanceColor) {
+        case 'red': 
+          newTask.style.color = "red"; 
+            break;
+        case 'orange': 
+          newTask.style.color = "orange"; 
+            break;
+        case 'yellow': 
+          newTask.style.color = "gold"; 
+            break;
+        case 'green': 
+          newTask.style.color = "green"; 
+            break;
+        case 'blue': 
+          newTask.style.color = "blue"; 
+            break;
+        case 'purple': 
+          newTask.style.color = "purple"; 
+            break;
+        case `black`:
+          newTask.style.color = "black";
         //default: newTask.style.color = "black"; break; //can't firgure out if I need this b/c default should be original input?
       }
 
